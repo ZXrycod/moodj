@@ -312,47 +312,104 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="font-body text-sm uppercase tracking-[0.4em] mb-4" style={{ color: '#e91e8c' }}>
-              Notre ADN
-            </p>
-            <h2
-              className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none mb-8"
-              style={{ color: '#ffffff' }}
+     <section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    
+    <div>
+      <p
+        className="font-body text-sm uppercase tracking-[0.4em] mb-4"
+        style={{ color: '#e91e8c' }}
+      >
+        Notre ADN
+      </p>
+
+      <h2
+        className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none mb-8"
+        style={{ color: '#ffffff' }}
+      >
+        SMASH BURGERS<br />
+        <span style={{ color: '#e91e8c' }}>FAITS MAISON.</span><br />
+        TACOS<br />
+        GÉNÉREUX.<br />
+        <span style={{ color: '#e91e8c' }}>VIBES 100% MOOD'J.</span>
+      </h2>
+
+      <p
+        className="font-body text-base leading-relaxed"
+        style={{ color: '#aaaaaa' }}
+      >
+        Chez MOOD'J, chaque burger est smasher à la commande, chaque sauce est préparée maison.
+        Pas de compromis, que du goût.
+      </p>
+    </div>
+
+    <div className="flex items-center justify-center">
+      <div className="relative square-appear">
+
+        {/* Carré fond */}
+        <div
+          className="w-72 h-72 rounded-3xl rotate-12 square-hover"
+          style={{ background: 'linear-gradient(135deg, #e91e8c 0%, #c0176f 100%)' }}
+        />
+
+        {/* Carré contenu */}
+        <div
+          className="absolute inset-4 rounded-2xl -rotate-6 flex items-center justify-center square-hover"
+          style={{ background: '#0a0a0a', border: '2px solid #1f1f1f' }}
+        >
+          <div className="text-center rotate-6">
+            <div
+              className="font-display text-7xl"
+              style={{ color: '#e91e8c' }}
             >
-              SMASH BURGERS<br />
-              <span style={{ color: '#e91e8c' }}>FAITS MAISON.</span><br />
-              TACOS<br />
-              GÉNÉREUX.<br />
-              <span style={{ color: '#e91e8c' }}>VIBES 100% MOOD'J.</span>
-            </h2>
-            <p className="font-body text-base leading-relaxed" style={{ color: '#aaaaaa' }}>
-              Chez MOOD'J, chaque burger est smasher à la commande, chaque sauce est préparée maison.
-              Pas de compromis, que du goût.
-            </p>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="relative">
-              <div
-                className="w-72 h-72 rounded-3xl rotate-12"
-                style={{ background: 'linear-gradient(135deg, #e91e8c 0%, #c0176f 100%)' }}
-              />
-              <div
-                className="absolute inset-4 rounded-2xl -rotate-6 flex items-center justify-center"
-                style={{ background: '#0a0a0a', border: '2px solid #1f1f1f' }}
-              >
-                <div className="text-center rotate-6">
-                  <div className="font-display text-7xl" style={{ color: '#e91e8c' }}>100%</div>
-                  <div className="font-display text-2xl tracking-widest text-white">MAISON</div>
-                  <div className="font-body text-xs mt-2 tracking-[0.3em]" style={{ color: '#aaaaaa' }}>DEPUIS BARBEZIEUX</div>
-                </div>
-              </div>
+              100%
+            </div>
+
+            <div className="font-display text-2xl tracking-widest text-white">
+              MAISON
+            </div>
+
+            <div
+              className="font-body text-xs mt-2 tracking-[0.3em]"
+              style={{ color: '#aaaaaa' }}
+            >
+              DEPUIS BARBEZIEUX
             </div>
           </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Animations */}
+  <style>{`
+    @keyframes squareFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9) rotate(6deg);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+      }
+    }
+
+    .square-appear {
+      animation: squareFadeIn 0.8s ease forwards;
+    }
+
+    .square-hover {
+      transition: all 0.4s ease;
+    }
+
+    .square-hover:hover {
+      transform: rotate(6deg) scale(1.05);
+      box-shadow: 0 0 40px rgba(233,30,140,0.5);
+    }
+  `}</style>
+</section>
 
       <section className="py-24 px-6" style={{ background: '#111111' }}>
         <div className="max-w-7xl mx-auto">
