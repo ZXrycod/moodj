@@ -1,28 +1,40 @@
+import classicBurger from '../../assets/images/classicBurger.png';
+
+export const IMAGES = {
+  classicBurger,
+};
+
 export const initialMenu = [
-  { id: 1, category: "Burgers", name: "Classic Burger", description: "150g bœuf, mayo, ketchup", prixSeul: 8.50, prixMenu: 11.50 },
-  { id: 2, category: "Burgers", name: "Chicken Curry", description: "Poulet pané, curry", prixSeul: 8.50, prixMenu: 11.50 },
-  { id: 3, category: "Burgers", name: "Classic Chicken", description: "Poulet pané, mayo, ketchup", prixSeul: 8.50, prixMenu: 11.50 },
-  { id: 4, category: "Burgers", name: "L'Apiculteur", description: "150g bœuf, chèvre, miel, mayo, ketchup", prixSeul: 8.90, prixMenu: 11.90 },
-  { id: 5, category: "Burgers", name: "BBB", description: "150g bœuf, bacon, mayo, BBQ", prixSeul: 8.90, prixMenu: 11.90 },
-  { id: 6, category: "Burgers", name: "Big Moodj", description: "150g de viande, oignons caramélisés, mayo, ketchup", prixSeul: 11.00, prixMenu: 14.50 },
-  { id: 7, category: "Burgers", name: "Montagnard", description: "150g bœuf, galette de pomme de terre, Saint Nectare, mayo, ketchup", prixSeul: 9.50, prixMenu: 12.50 },
-  { id: 8, category: "Burgers", name: "Supplément Burger", description: "Chèvre, boursin, oignon frit, cheddar, bacon, oignon caramélisé, double steak (+3€)", prixSeul: 1.30, prixMenu: null },
-  { id: 9, category: "Tacos", name: "Simple (1 viande)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 7.00, prixMenu: 10.00 },
-  { id: 10, category: "Tacos", name: "Double (2 viandes)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 9.00, prixMenu: 12.00 },
-  { id: 11, category: "Tacos", name: "Spartiate (3 viandes, 2 tortillas)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 13.00, prixMenu: 16.00 },
-  { id: 12, category: "Tacos", name: "Titan (4 viandes, 3 tortillas)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 16.00, prixMenu: 19.00 },
-  { id: 13, category: "Sandwichs", name: "Américain", description: "Pain sauce au choix, 150g bœuf séché frite, smasher, salade, frites maison", prixSeul: 6.90, prixMenu: null },
-  { id: 14, category: "Sandwichs", name: "Kebab", description: "Pain kebab sauce au choix, salade, tomate, oignon", prixSeul: 7.50, prixMenu: null },
-  { id: 15, category: "Salades", name: "César", description: "Salade, poulet pané, tomate, carotte, parmesan", prixSeul: 10.00, prixMenu: null },
-  { id: 16, category: "Salades", name: "Fromagère", description: "Mozza, parmesan, chèvre, tomate, carotte", prixSeul: 10.00, prixMenu: null },
-  { id: 17, category: "Frites", name: "Petites Frites", description: "+ sauce au choix", prixSeul: 1.90, prixMenu: null },
-  { id: 18, category: "Frites", name: "Moyennes Frites", description: "+ sauce au choix", prixSeul: 2.90, prixMenu: null },
-  { id: 19, category: "Frites", name: "Grandes Frites", description: "+ sauce au choix", prixSeul: 3.80, prixMenu: null },
-  { id: 20, category: "Petites Faim", name: "3 Tenders", description: "Sauce au choix", prixSeul: 3.80, prixMenu: null },
-  { id: 21, category: "Petites Faim", name: "4 Nuggets", description: "Sauce au choix", prixSeul: 3.80, prixMenu: null },
-  { id: 22, category: "Petites Faim", name: "5 Tenders", description: "Sauce au choix", prixSeul: 7.80, prixMenu: null },
-  { id: 23, category: "Petites Faim", name: "8 Tenders", description: "Sauce au choix", prixSeul: 10.80, prixMenu: null },
-  { id: 24, category: "Petites Faim", name: "9 Nuggets", description: "Sauce au choix", prixSeul: 5.80, prixMenu: null },
-  { id: 25, category: "Petites Faim", name: "13 Nuggets", description: "Sauce au choix", prixSeul: 8.80, prixMenu: null },
-  { id: 26, category: "Menu Enfant", name: "Menu Enfant", description: "3 tenders ou 4 nuggets + frites maison + sauce au choix + 1 Caprisun", prixSeul: 5.90, prixMenu: null },
+  { id: 1, category: "Burgers", name: "Classic Burger", description: "150g bœuf, mayo, ketchup", prixSeul: 8.50, prixMenu: 11.50, image: classicBurger },
+  { id: 2, category: "Burgers", name: "Chicken Curry", description: "Poulet pané, curry", prixSeul: 8.50, prixMenu: 11.50, image: null },
+  { id: 3, category: "Burgers", name: "Classic Chicken", description: "Poulet pané, mayo, ketchup", prixSeul: 8.50, prixMenu: 11.50, image: null },
+  { id: 4, category: "Burgers", name: "L'Apiculteur", description: "150g bœuf, chèvre, miel, mayo, ketchup", prixSeul: 8.90, prixMenu: 11.90, image: null },
+  { id: 5, category: "Burgers", name: "BBB", description: "150g bœuf, bacon, mayo, BBQ", prixSeul: 8.90, prixMenu: 11.90, image: null },
+  { id: 6, category: "Burgers", name: "Big Moodj", description: "150g de viande, oignons caramélisés, mayo, ketchup", prixSeul: 11.00, prixMenu: 14.50, image: null },
+  { id: 7, category: "Burgers", name: "Montagnard", description: "150g bœuf, galette de pomme de terre, Saint Nectare, mayo, ketchup", prixSeul: 9.50, prixMenu: 12.50, image: null },
+  { id: 8, category: "Burgers", name: "Supplément Burger", description: "Chèvre, boursin, oignon frit, cheddar, bacon, oignon caramélisé, double steak (+3€)", prixSeul: 1.30, prixMenu: null, image: null },
+
+  { id: 9, category: "Tacos", name: "Simple (1 viande)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 7.00, prixMenu: 10.00, image: null },
+  { id: 10, category: "Tacos", name: "Double (2 viandes)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 9.00, prixMenu: 12.00, image: null },
+  { id: 11, category: "Tacos", name: "Spartiate (3 viandes, 2 tortillas)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 13.00, prixMenu: 16.00, image: null },
+  { id: 12, category: "Tacos", name: "Titan (4 viandes, 3 tortillas)", description: "Sauce Moodj maison, sauce fromagère maison, frite", prixSeul: 16.00, prixMenu: 19.00, image: null },
+
+  { id: 13, category: "Sandwichs", name: "Américain", description: "Pain sauce au choix, 150g bœuf séché frite, smasher, salade, frites maison", prixSeul: 6.90, prixMenu: null, image: null },
+  { id: 14, category: "Sandwichs", name: "Kebab", description: "Pain kebab sauce au choix, salade, tomate, oignon", prixSeul: 7.50, prixMenu: null, image: null },
+
+  { id: 15, category: "Salades", name: "César", description: "Salade, poulet pané, tomate, carotte, parmesan", prixSeul: 10.00, prixMenu: null, image: null },
+  { id: 16, category: "Salades", name: "Fromagère", description: "Mozza, parmesan, chèvre, tomate, carotte", prixSeul: 10.00, prixMenu: null, image: null },
+
+  { id: 17, category: "Frites", name: "Petites Frites", description: "+ sauce au choix", prixSeul: 1.90, prixMenu: null, image: null },
+  { id: 18, category: "Frites", name: "Moyennes Frites", description: "+ sauce au choix", prixSeul: 2.90, prixMenu: null, image: null },
+  { id: 19, category: "Frites", name: "Grandes Frites", description: "+ sauce au choix", prixSeul: 3.80, prixMenu: null, image: null },
+
+  { id: 20, category: "Petites Faim", name: "3 Tenders", description: "Sauce au choix", prixSeul: 3.80, prixMenu: null, image: null },
+  { id: 21, category: "Petites Faim", name: "4 Nuggets", description: "Sauce au choix", prixSeul: 3.80, prixMenu: null, image: null },
+  { id: 22, category: "Petites Faim", name: "5 Tenders", description: "Sauce au choix", prixSeul: 7.80, prixMenu: null, image: null },
+  { id: 23, category: "Petites Faim", name: "8 Tenders", description: "Sauce au choix", prixSeul: 10.80, prixMenu: null, image: null },
+  { id: 24, category: "Petites Faim", name: "9 Nuggets", description: "Sauce au choix", prixSeul: 5.80, prixMenu: null, image: null },
+  { id: 25, category: "Petites Faim", name: "13 Nuggets", description: "Sauce au choix", prixSeul: 8.80, prixMenu: null, image: null },
+
+  { id: 26, category: "Menu Enfant", name: "Menu Enfant", description: "3 tenders ou 4 nuggets + frites maison + sauce au choix + 1 Caprisun", prixSeul: 5.90, prixMenu: null, image: null },
 ];

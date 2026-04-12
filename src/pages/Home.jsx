@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Flame } from 'lucide-react';
 import { useData } from '../context/DataContext';
+import { IMAGES } from '../data/initialMenu';
+
 
 const TAG_COLORS = {
   Promo: { bg: '#1a0a10', border: '#e91e8c', text: '#e91e8c' },
@@ -8,10 +10,13 @@ const TAG_COLORS = {
   Nouveauté: { bg: '#0a1a0a', border: '#22c55e', text: '#4ade80' },
 };
 
-function BestSellerCard({ name, description, prixSeul, prixMenu, category }) {
+function BestSellerCard({ name, description, prixSeul, prixMenu, category, image }) {
+
+  const imageSrc = image || null;
+
   return (
     <div
-      className="relative rounded-2xl p-6 flex flex-col gap-4 transition-all duration-300 group cursor-pointer"
+      className="relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 group cursor-pointer"
       style={{
         background: '#111111',
         border: '1px solid #1f1f1f',
@@ -26,26 +31,47 @@ function BestSellerCard({ name, description, prixSeul, prixMenu, category }) {
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      <div className="flex items-center justify-between">
-        <span
-          className="font-body text-xs uppercase tracking-widest px-3 py-1 rounded-full"
-          style={{ background: '#1a0a10', color: '#e91e8c', border: '1px solid #e91e8c' }}
-        >
-          {category}
-        </span>
-        <Flame size={18} color="#e91e8c" />
-      </div>
-      <h3 className="font-script text-2xl text-white">{name}</h3>
-      <p className="font-body text-sm flex-1" style={{ color: '#aaaaaa' }}>{description}</p>
-      <div className="flex items-end gap-3 mt-2">
-        <span className="font-display text-3xl" style={{ color: '#e91e8c' }}>
-          {prixSeul.toFixed(2).replace('.', ',')}€
-        </span>
-        {prixMenu && (
-          <span className="font-body text-xs pb-1" style={{ color: '#aaaaaa' }}>
-            En menu : {prixMenu.toFixed(2).replace('.', ',')}€
+
+      {/* IMAGE */}
+      {imageSrc && (
+        <div className="h-40 w-full overflow-hidden">
+          <img
+            src={imageSrc}
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+      )}
+
+      {/* CONTENU */}
+      <div className="p-6 flex flex-col gap-4">
+        <div className="flex items-center justify-between">
+          <span
+            className="font-body text-xs uppercase tracking-widest px-3 py-1 rounded-full"
+            style={{ background: '#1a0a10', color: '#e91e8c', border: '1px solid #e91e8c' }}
+          >
+            {category}
           </span>
-        )}
+          <Flame size={18} color="#e91e8c" />
+        </div>
+
+        <h3 className="font-script text-2xl text-white">{name}</h3>
+
+        <p className="font-body text-sm flex-1" style={{ color: '#aaaaaa' }}>
+          {description}
+        </p>
+
+        <div className="flex items-end gap-3 mt-2">
+          <span className="font-display text-3xl" style={{ color: '#e91e8c' }}>
+            {prixSeul.toFixed(2).replace('.', ',')}€
+          </span>
+
+          {prixMenu && (
+            <span className="font-body text-xs pb-1" style={{ color: '#aaaaaa' }}>
+              En menu : {prixMenu.toFixed(2).replace('.', ',')}€
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

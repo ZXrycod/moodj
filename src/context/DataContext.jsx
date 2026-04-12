@@ -4,10 +4,20 @@ import { initialNews } from '../data/initialNews';
 
 const DataContext = createContext(null);
 
+const VERSION = 1;
+
 const loadFromStorage = (key, fallback) => {
   try {
-    const stored = localStorage.getItem(key);
-    return stored ? JSON.parse(stored) : fallback;
+    const version = localStorage.getItem(key + '_version');
+
+    if (version != VERSION) {
+      localStorage.setItem(key + '_version', VERSION);
+      localStorage.setItem(key, JSON.stringify(fallback));
+      return fallback;
+    }
+
+    const stored = JSON.parse(localStorage.getItem(key));
+    return stored || fallback;
   } catch {
     return fallback;
   }
