@@ -1,0 +1,38 @@
+export const initialNews = [
+  {
+    id: 1,
+    titre: "Nouveau : Le Montagnard est arrivé !",
+    date: "2024-11-15",
+    extrait: "Un burger de montagne avec galette de pomme de terre et Saint Nectare fondu. Découvrez notre dernière création.",
+    contenu: "Nous sommes fiers de vous présenter notre tout nouveau burger : Le Montagnard ! Inspiré des saveurs de la montagne, ce burger généreux associe un steak de bœuf de 150g, une galette de pomme de terre croustillante, du Saint Nectare fondant, le tout relevé par notre mayo maison et un ketchup artisanal. Un burger unique qui va réchauffer vos soirées d'automne. Disponible dès maintenant au comptoir MOOD'J !",
+    tag: "Nouveauté",
+    image: null,
+  },
+  {
+    id: 2,
+    titre: "Happy Hour tous les jeudis !",
+    date: "2024-11-01",
+    extrait: "Chaque jeudi de 18h à 20h, profitez de -20% sur toute la carte. Une occasion de découvrir nos burgers à prix réduit !",
+    contenu: "La bonne nouvelle de la semaine : MOOD'J lance ses Happy Hours ! Chaque jeudi soir de 18h à 20h, bénéficiez de 20% de réduction sur l'ensemble de notre carte. Que vous soyez amateur de smash burgers, de tacos généreux ou de nos célèbres frites maison, c'est le moment idéal pour venir nous rendre visite avec vos amis et votre famille. On vous attend nombreux !",
+    tag: "Promo",
+    image: null,
+  },
+  {
+    id: 3,
+    titre: "MOOD'J fête ses 1 an à Barbezieux !",
+    date: "2024-10-20",
+    extrait: "Un an déjà ! Pour célébrer notre premier anniversaire, on organise une soirée spéciale avec surprises et concours.",
+    contenu: "MOOD'J souffle sa première bougie ! Pour marquer cet anniversaire exceptionnel, nous organisons une grande fête le samedi 2 novembre. Au programme : burgers offerts aux 50 premiers clients, tirage au sort pour gagner des menus gratuits pendant un mois, et ambiance musicale assurée toute la soirée. Merci à tous nos fidèles clients pour votre soutien depuis le premier jour. C'est grâce à vous que MOOD'J est devenu LE spot food de Barbezieux-Saint-Hilaire !",
+    tag: "Événement",
+    image: null,
+  },
+  {
+    id: 4,
+    titre: "Le Titan : relevez le défi !",
+    date: "2024-10-05",
+    extrait: "Notre Tacos Titan avec 4 viandes et 3 tortillas est de retour au menu. Êtes-vous prêts pour le défi ?",
+    contenu: "Le géant est de retour ! Notre légendaire Tacos Titan, avec ses 4 viandes généreuses et ses 3 tortillas, revient en force au menu MOOD'J. Ce monstre culinaire est accompagné de notre sauce Moodj maison et de notre sauce fromagère onctueuse. Un vrai défi pour les plus courageux d'entre vous ! Partagez votre expérience sur Instagram avec le hashtag #TitanMoodj et les meilleures photos seront relayées sur notre page.",
+    tag: "Nouveauté",
+    image: null,
+  },
+];
