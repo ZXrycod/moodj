@@ -33,7 +33,7 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
           <div className="flex justify-center mb-6">
-            <img src={Logo} alt="Logo" className="w-32" />
+            <a href="/"><img src={Logo} alt="Logo" className="w-32" /></a>
           </div>
           <h1 className="font-display text-4xl text-white tracking-widest">ADMINISTRATION</h1>
           <p className="font-body text-sm mt-2" style={{ color: '#aaaaaa' }}>

@@ -22,7 +22,7 @@ export default function AdminLayout({ children }) {
   const SidebarContent = () => (
     <>
       <div className="p-6 mb-4" style={{ borderBottom: '1px solid #1f1f1f' }}>
-        <img src={Logo} alt="Logo" className="w-32" />
+        <a href="/"><img src={Logo} alt="Logo" className="w-32" /></a>
         <p className="font-body text-xs uppercase tracking-widest mt-3" style={{ color: '#555' }}>
           Espace Admin
         </p>
