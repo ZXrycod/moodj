@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { MapPin, Clock, Send } from 'lucide-react';
 
 const hours = [
-  { day: 'Lundi', hours: '11h30 – 14h30 / 18h30 – 22h00' },
-  { day: 'Mardi', hours: '11h30 – 14h30 / 18h30 – 22h00' },
-  { day: 'Mercredi', hours: '11h30 – 14h30 / 18h30 – 22h00' },
-  { day: 'Jeudi', hours: '11h30 – 14h30 / 18h30 – 22h00' },
-  { day: 'Vendredi', hours: '11h30 – 14h30 / 18h30 – 22h30' },
-  { day: 'Samedi', hours: '11h30 – 22h30' },
-  { day: 'Dimanche', hours: 'Fermé', closed: true },
+  { day: 'Lundi', hours: '11h30 – 13h30 / 18h30 – 21h00' },
+  { day: 'Mardi', hours: '11h30 – 13h30 / 18h30 – 21h00' },
+  { day: 'Mercredi', hours: '11h30 – 13h30 / 18h30 – 21h00' },
+  { day: 'Jeudi', hours: '11h30 – 13h30 / 18h30 – 21h00' },
+  { day: 'Vendredi', hours: '11h30 – 14h00 / 18h30 – 21h30' },
+  { day: 'Samedi', hours: '11h30 – 14h00 / 18h30 - 21h30' },
+  { day: 'Dimanche', hours: '18h00 - 21h00' },
 ];
 
 export default function Contact() {
@@ -54,8 +54,8 @@ export default function Contact() {
               </div>
               <div className="relative z-10 text-center">
                 <MapPin size={40} color="#e91e8c" className="mx-auto mb-3" />
-                <p className="font-body font-semibold text-white text-lg">Barbezieux-Saint-Hilaire</p>
-                <p className="font-body text-sm" style={{ color: '#aaaaaa' }}>16300 Charente, France</p>
+                <p className="font-body font-semibold text-white text-lg">33 Av. Pierre Mendès France,</p>
+                <p className="font-body text-sm" style={{ color: '#aaaaaa' }}>16300, Barbezieux-Saint-Hilaire, France</p>
               </div>
             </div>
             <div className="p-6">
@@ -64,7 +64,7 @@ export default function Contact() {
                 <div>
                   <p className="font-body font-semibold text-white">Adresse</p>
                   <p className="font-body text-sm mt-1" style={{ color: '#aaaaaa' }}>
-                    Barbezieux-Saint-Hilaire<br />16300, Charente<br />France
+                    33 Av. Pierre Mendès France,<br />16300, Barbezieux-Saint-Hilaire<br />France
                   </p>
                 </div>
               </div>

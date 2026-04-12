@@ -11,9 +11,9 @@ function TikTokIcon() {
 }
 
 const socials = [
-  { icon: <Instagram size={20} />, label: 'Instagram', href: '#' },
-  { icon: <Facebook size={20} />, label: 'Facebook', href: '#' },
-  { icon: <TikTokIcon />, label: 'TikTok', href: '#' },
+  { icon: <Instagram size={20} />, label: 'Instagram', href: 'https://www.instagram.com/moodjsmash/' },
+  { icon: <Facebook size={20} />, label: 'Facebook', href: 'https://www.facebook.com/people/MOOD-j/100095449980569/' },
+  { icon: <TikTokIcon />, label: 'TikTok', href: 'https://www.tiktok.com/@moodjsmash' },
 ];
 
 const navLinks = [
@@ -76,16 +76,19 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-xl tracking-widest text-white mb-6">NOUS TROUVER</h3>
             <address className="not-italic font-body text-sm space-y-2" style={{ color: '#aaaaaa' }}>
-              <p>Barbezieux-Saint-Hilaire</p>
-              <p>16300, Charente</p>
-              <p>France</p>
+              <p>33 Av. Pierre Mendès France</p>
+              <p>16300, Barbezieux-Saint-Hilaire</p>
               <p className="pt-2">
-                <span className="text-white font-medium">Lun – Sam :</span> 11h30 – 14h30 / 18h30 – 22h00
-              </p>
-              <p>
-                <span className="text-white font-medium">Dimanche :</span> Fermé
+                <span className="text-white font-medium">Lun – Jeu :</span> 11h30 – 13h30 / 18h30 – 21h00
+                <br />
+                <span className="text-white font-mediuem">Ven – Sam :</span> 11h30 – 14h00 / 18h30 - 21h30
+                <br />
+                <span className="text-white font-mediuem">Dimanche :</span> 18h00 - 21h00
               </p>
             </address>
+            <p className="font-body text-sm mt-4" style={{ color: '#aaaaaa' }}>
+              <a href="tel:0545781717"> <span className="text-white font-medium">Tel :</span> 05 45 78 17 17</a>
+            </p>
           </div>
         </div>
 
