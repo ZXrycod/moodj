@@ -363,6 +363,70 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+<section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-10">
+      <p
+        className="font-body text-sm uppercase tracking-[0.4em] mb-3"
+        style={{ color: '#e91e8c' }}
+      >
+        Nous trouver
+      </p>
+      <h2 className="font-display text-5xl sm:text-6xl text-white">
+        NOTRE ADRESSE
+      </h2>
+      <p className="font-body text-sm mt-4" style={{ color: '#aaaaaa' }}>
+        33 Av. Pierre Mendès France, 16300 Barbezieux-Saint-Hilaire
+      </p>
+    </div>
+
+
+<div
+  className="w-full h-[400px] rounded-2xl overflow-hidden border border-[#1f1f1f] transition-all duration-300"
+  onMouseEnter={e => {
+    e.currentTarget.style.boxShadow = '0 0 30px rgba(233,30,140,0.3)';
+  }}
+  onMouseLeave={e => {
+    e.currentTarget.style.boxShadow = 'none';
+  }}
+>
+  <iframe
+    title="Google Maps"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire&output=embed"
+  ></iframe>
+</div>
+
+<div className="text-center">
+  <a
+    href="https://www.google.com/maps/dir/?api=1&destination=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block mt-6 px-6 py-3 rounded-full font-body text-sm uppercase tracking-widest transition-all duration-200"
+    style={{ background: '#e91e8c', color: '#fff' }}
+    onMouseEnter={e => {
+      e.currentTarget.style.background = '#ff4db8';
+      e.currentTarget.style.boxShadow = '0 0 20px rgba(233,30,140,0.4)';
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.background = '#e91e8c';
+      e.currentTarget.style.boxShadow = 'none';
+    }}
+  >
+    Itinéraire Google Maps
+  </a>
+</div>
+
+  </div>
+</section>
+
+
     </div>
   );
 }
