@@ -52,7 +52,7 @@ function NewsCard({ post, onClick }) {
           background: 'linear-gradient(135deg, #1a0a10 0%, rgba(233,30,140,0.15) 50%, #0a0a0a 100%)',
         }}
       >
-        <span className="font-display text-8xl" style={{ color: 'rgba(233,30,140,0.1)' }}>MOOD'J</span>
+        <span className="font-display text-8xl" style={{ color: 'rgba(233,30,140,0.1)' }}>Photo</span>
         <div className="absolute top-4 left-4">
           <TagBadge tag={post.tag} />
         </div>

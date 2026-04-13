@@ -1,7 +1,11 @@
 import classicBurger from '../../assets/images/classicBurger.png';
+import bigmoodj from '../../assets/images/burger.jpg';
+import BBB from '../../assets/images/burgerbarbecue.webp';
 
 export const IMAGES = {
   classicBurger,
+  bigmoodj,
+  BBB
 };
 
 export const initialMenu = [
@@ -9,8 +13,8 @@ export const initialMenu = [
   { id: 2, category: "Burgers", name: "Chicken Curry", description: "Poulet pané, curry", prixSeul: 8.50, prixMenu: 11.50, image: null },
   { id: 3, category: "Burgers", name: "Classic Chicken", description: "Poulet pané, mayo, ketchup", prixSeul: 8.50, prixMenu: 11.50, image: null },
   { id: 4, category: "Burgers", name: "L'Apiculteur", description: "150g bœuf, chèvre, miel, mayo, ketchup", prixSeul: 8.90, prixMenu: 11.90, image: null },
-  { id: 5, category: "Burgers", name: "BBB", description: "150g bœuf, bacon, mayo, BBQ", prixSeul: 8.90, prixMenu: 11.90, image: null },
-  { id: 6, category: "Burgers", name: "Big Moodj", description: "150g de viande, oignons caramélisés, mayo, ketchup", prixSeul: 11.00, prixMenu: 14.50, image: null },
+  { id: 5, category: "Burgers", name: "BBB", description: "150g bœuf, bacon, mayo, BBQ", prixSeul: 8.90, prixMenu: 11.90, image: BBB },
+  { id: 6, category: "Burgers", name: "Big Moodj", description: "150g de viande, oignons caramélisés, mayo, ketchup", prixSeul: 11.00, prixMenu: 14.50, image: bigmoodj},
   { id: 7, category: "Burgers", name: "Montagnard", description: "150g bœuf, galette de pomme de terre, Saint Nectare, mayo, ketchup", prixSeul: 9.50, prixMenu: 12.50, image: null },
   { id: 8, category: "Burgers", name: "Supplément Burger", description: "Chèvre, boursin, oignon frit, cheddar, bacon, oignon caramélisé, double steak (+3€)", prixSeul: 1.30, prixMenu: null, image: null },
 

@@ -36,41 +36,40 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
+
+          {/* MAP AVEC GOOGLE MAPS */}
           <div
             className="rounded-2xl overflow-hidden"
             style={{ border: '2px solid #e91e8c', background: '#111111' }}
           >
-            <div
-              className="h-56 flex items-center justify-center relative overflow-hidden"
-              style={{
-                background: 'linear-gradient(135deg, #1a0a10 0%, #2a0a18 50%, #0a0a0a 100%)',
-              }}
-            >
-              <div
-                className="absolute inset-0 flex items-center justify-center"
-                style={{ opacity: 0.08 }}
-              >
-                <span className="font-display text-9xl text-pink">MAP</span>
-              </div>
-              <div className="relative z-10 text-center">
-                <MapPin size={40} color="#e91e8c" className="mx-auto mb-3" />
-                <p className="font-body font-semibold text-white text-lg">33 Av. Pierre Mendès France,</p>
-                <p className="font-body text-sm" style={{ color: '#aaaaaa' }}>16300, Barbezieux-Saint-Hilaire, France</p>
-              </div>
+            <div className="h-56 w-full">
+              <iframe
+                title="Google Map"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                src="https://www.google.com/maps?q=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire,+France&output=embed"
+              ></iframe>
             </div>
+
             <div className="p-6">
               <div className="flex items-start gap-4">
                 <MapPin size={20} color="#e91e8c" className="mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-body font-semibold text-white">Adresse</p>
                   <p className="font-body text-sm mt-1" style={{ color: '#aaaaaa' }}>
-                    33 Av. Pierre Mendès France,<br />16300, Barbezieux-Saint-Hilaire<br />France
+                    33 Av. Pierre Mendès France,<br />
+                    16300, Barbezieux-Saint-Hilaire<br />
+                    France
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* HORAIRES */}
           <div
             className="rounded-2xl overflow-hidden"
             style={{ border: '1px solid #1f1f1f', background: '#111111' }}
@@ -82,6 +81,7 @@ export default function Contact() {
               <Clock size={20} color="#e91e8c" />
               <h2 className="font-display text-2xl tracking-widest text-white">HORAIRES</h2>
             </div>
+
             <div className="p-4">
               {hours.map((row, i) => (
                 <div
@@ -107,10 +107,8 @@ export default function Contact() {
                       </span>
                     )}
                   </span>
-                  <span
-                    className="font-body text-sm"
-                    style={{ color: row.closed ? '#555' : '#aaaaaa' }}
-                  >
+
+                  <span className="font-body text-sm" style={{ color: '#aaaaaa' }}>
                     {row.hours}
                   </span>
                 </div>
@@ -119,11 +117,13 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* FORMULAIRE */}
         <div
           className="rounded-2xl p-8"
           style={{ background: '#111111', border: '1px solid #1f1f1f' }}
         >
           <h2 className="font-display text-4xl tracking-widest text-white mb-8">NOUS CONTACTER</h2>
+
           {sent ? (
             <div
               className="text-center py-12 rounded-xl"
@@ -137,6 +137,7 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
               <div>
                 <label className="block font-body text-xs uppercase tracking-widest mb-2" style={{ color: '#aaaaaa' }}>
                   Nom *
@@ -147,21 +148,11 @@ export default function Contact() {
                   value={form.nom}
                   onChange={e => setForm({ ...form, nom: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl font-body text-sm text-white outline-none transition-all duration-200"
-                  style={{
-                    background: '#161616',
-                    border: '1px solid #1f1f1f',
-                  }}
-                  onFocus={e => {
-                    e.target.style.borderColor = '#e91e8c';
-                    e.target.style.boxShadow = '0 0 12px rgba(233,30,140,0.2)';
-                  }}
-                  onBlur={e => {
-                    e.target.style.borderColor = '#1f1f1f';
-                    e.target.style.boxShadow = 'none';
-                  }}
+                  style={{ background: '#161616', border: '1px solid #1f1f1f' }}
                   placeholder="Votre nom"
                 />
               </div>
+
               <div>
                 <label className="block font-body text-xs uppercase tracking-widest mb-2" style={{ color: '#aaaaaa' }}>
                   Email *
@@ -173,17 +164,10 @@ export default function Contact() {
                   onChange={e => setForm({ ...form, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl font-body text-sm text-white outline-none transition-all duration-200"
                   style={{ background: '#161616', border: '1px solid #1f1f1f' }}
-                  onFocus={e => {
-                    e.target.style.borderColor = '#e91e8c';
-                    e.target.style.boxShadow = '0 0 12px rgba(233,30,140,0.2)';
-                  }}
-                  onBlur={e => {
-                    e.target.style.borderColor = '#1f1f1f';
-                    e.target.style.boxShadow = 'none';
-                  }}
                   placeholder="votre@email.fr"
                 />
               </div>
+
               <div className="sm:col-span-2">
                 <label className="block font-body text-xs uppercase tracking-widest mb-2" style={{ color: '#aaaaaa' }}>
                   Message *
@@ -195,34 +179,20 @@ export default function Contact() {
                   onChange={e => setForm({ ...form, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl font-body text-sm text-white outline-none transition-all duration-200 resize-none"
                   style={{ background: '#161616', border: '1px solid #1f1f1f' }}
-                  onFocus={e => {
-                    e.target.style.borderColor = '#e91e8c';
-                    e.target.style.boxShadow = '0 0 12px rgba(233,30,140,0.2)';
-                  }}
-                  onBlur={e => {
-                    e.target.style.borderColor = '#1f1f1f';
-                    e.target.style.boxShadow = 'none';
-                  }}
                   placeholder="Votre message..."
                 />
               </div>
+
               <div className="sm:col-span-2">
                 <button
                   type="submit"
                   className="flex items-center gap-2 font-body font-semibold text-sm uppercase tracking-widest px-10 py-4 rounded-full transition-all duration-200"
                   style={{ background: '#e91e8c', color: '#fff' }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#ff4db8';
-                    e.currentTarget.style.boxShadow = '0 0 30px rgba(233,30,140,0.5)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#e91e8c';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
                 >
                   <Send size={16} /> Envoyer le message
                 </button>
               </div>
+
             </form>
           )}
         </div>

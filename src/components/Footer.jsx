@@ -28,17 +28,21 @@ export default function Footer() {
     <footer style={{ background: '#0a0a0a', borderTop: '1px solid #1f1f1f' }}>
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          
           <div>
             <img src={Logo} alt="Logo" className="h-12" />
             <p className="font-body text-sm mt-4" style={{ color: '#aaaaaa' }}>
               Le spot fast-food incontournable<br />de Barbezieux-Saint-Hilaire.
             </p>
+
             <div className="flex gap-4 mt-6">
               {socials.map(s => (
                 <a
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:text-pink"
                   style={{ color: '#aaaaaa', border: '1px solid #1f1f1f' }}
                   onMouseEnter={e => {
@@ -81,13 +85,16 @@ export default function Footer() {
               <p className="pt-2">
                 <span className="text-white font-medium">Lun – Jeu :</span> 11h30 – 13h30 / 18h30 – 21h00
                 <br />
-                <span className="text-white font-mediuem">Ven – Sam :</span> 11h30 – 14h00 / 18h30 - 21h30
+                <span className="text-white font-medium">Ven – Sam :</span> 11h30 – 14h00 / 18h30 - 21h30
                 <br />
-                <span className="text-white font-mediuem">Dimanche :</span> 18h00 - 21h00
+                <span className="text-white font-medium">Dimanche :</span> 18h00 - 21h00
               </p>
             </address>
+
             <p className="font-body text-sm mt-4" style={{ color: '#aaaaaa' }}>
-              <a href="tel:0545781717"> <span className="text-white font-medium">Tel :</span> 05 45 78 17 17</a>
+              <a href="tel:0545781717">
+                <span className="text-white font-medium">Tel :</span> 05 45 78 17 17
+              </a>
             </p>
           </div>
         </div>
@@ -99,9 +106,30 @@ export default function Footer() {
           <p className="font-body text-xs" style={{ color: '#555' }}>
             © 2024 MOOD'J — Tous droits réservés
           </p>
+
+           <p className="font-body text-xs" style={{ color: '#555' }}>
+            Développé par{' '}
+            <a
+              href="https://www.synchrodev.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-200"
+              style={{ color: '#e91e8c' }}
+              onMouseEnter={e => {
+                e.currentTarget.style.textShadow = '0 0 8px rgba(233,30,140,0.6)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.textShadow = 'none';
+              }}
+            >
+              Synchrodev
+            </a>
+          </p>
+
           <p className="font-body text-xs" style={{ color: '#555' }}>
             Barbezieux-Saint-Hilaire, 16 — Fait avec passion
           </p>
+
         </div>
       </div>
     </footer>

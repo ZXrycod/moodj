@@ -102,7 +102,7 @@ function NewsCard({ titre, date, extrait, tag }) {
           background: 'linear-gradient(135deg, #1a0a10 0%, #e91e8c22 50%, #0a0a0a 100%)',
         }}
       >
-        <span className="font-display text-6xl" style={{ color: '#e91e8c22' }}>MOOD'J</span>
+        <span className="font-display text-6xl" style={{ color: '#e91e8c22' }}>Photo</span>
       </div>
       <div className="p-5">
         <span
@@ -200,15 +200,14 @@ export default function Home() {
               FAST FOOD
             </span>
             <span
-              className="block text-9xl sm:text-[11rem] fade-in-delay-2"
-              style={{ color: '#e91e8c', textShadow: '0 0 60px rgba(233,30,140,0.4)' }}
+              className="block text-9xl sm:text-[11rem] text-outline-pink fade-in-delay-2"
             >
               MOOD'J SMASH
             </span>
           </h1>
           <p
             className="font-body text-lg mt-6 mb-10 fade-in-delay-2"
-            style={{ color: '#aaaaaa' }}
+            style={{ color: '#ffffff' }}
           >
             Smash Burgers maison · Tacos généreux · Snacks &amp; vibes 100% Mood'J
           </p>
@@ -278,10 +277,10 @@ export default function Home() {
       <section className="py-24 px-6" style={{ background: '#111111' }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="font-body text-sm uppercase tracking-[0.4em] mb-3" style={{ color: '#e91e8c' }}>
+            <p className="font-body text-sm uppercase tracking-[0.4em] mb-3" style={{ color: '#ffffff' }}>
               Les classiques
             </p>
-            <h2 className="font-display text-6xl sm:text-7xl" style={{ color: '#e91e8c' }}>
+            <h2 className="font-display text-6xl sm:text-7xl text-outline-pink">
               NOS INCONTOURNABLES
             </h2>
           </div>
@@ -312,79 +311,76 @@ export default function Home() {
         </div>
       </section>
 
-     <section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
-  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    
-    <div>
-      <p
-        className="font-body text-sm uppercase tracking-[0.4em] mb-4"
-        style={{ color: '#e91e8c' }}
-      >
-        Notre ADN
-      </p>
+      <section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-      <h2
-        className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none mb-8"
-        style={{ color: '#ffffff' }}
-      >
-        SMASH BURGERS<br />
-        <span style={{ color: '#e91e8c' }}>FAITS MAISON.</span><br />
-        TACOS<br />
-        GÉNÉREUX.<br />
-        <span style={{ color: '#e91e8c' }}>VIBES 100% MOOD'J.</span>
-      </h2>
-
-      <p
-        className="font-body text-base leading-relaxed"
-        style={{ color: '#aaaaaa' }}
-      >
-        Chez MOOD'J, chaque burger est smasher à la commande, chaque sauce est préparée maison.
-        Pas de compromis, que du goût.
-      </p>
-    </div>
-
-    <div className="flex items-center justify-center">
-      <div className="relative square-appear">
-
-        {/* Carré fond */}
-        <div
-          className="w-72 h-72 rounded-3xl rotate-12 square-hover"
-          style={{ background: 'linear-gradient(135deg, #e91e8c 0%, #c0176f 100%)' }}
-        />
-
-        {/* Carré contenu */}
-        <div
-          className="absolute inset-4 rounded-2xl -rotate-6 flex items-center justify-center square-hover"
-          style={{ background: '#0a0a0a', border: '2px solid #1f1f1f' }}
-        >
-          <div className="text-center rotate-6">
-            <div
-              className="font-display text-7xl"
-              style={{ color: '#e91e8c' }}
+          <div>
+            <p
+              className="font-body text-sm uppercase tracking-[0.4em] mb-4"
+              style={{ color: '#ffffff' }}
             >
-              100%
-            </div>
+              Notre ADN
+            </p>
 
-            <div className="font-display text-2xl tracking-widest text-white">
-              MAISON
-            </div>
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none mb-8 text-outline-pink">
+              SMASH BURGERS<br />
+              <span style={{ color: '#e91e8c' }}>FAITS MAISON.</span><br />
+              TACOS<br />
+              GÉNÉREUX.<br />
+              <span style={{ color: '#e91e8c' }}>VIBES 100% MOOD'J.</span>
+            </h2>
 
-            <div
-              className="font-body text-xs mt-2 tracking-[0.3em]"
-              style={{ color: '#aaaaaa' }}
+            <p
+              className="font-body text-base leading-relaxed"
+              style={{ color: '#ffffff' }}
             >
-              DEPUIS BARBEZIEUX
+              Chez MOOD'J, chaque burger est smasher à la commande, chaque sauce est préparée maison.
+              Pas de compromis, que du goût.
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <div className="relative square-appear">
+
+              {/* Carré fond */}
+              <div
+                className="w-72 h-72 rounded-3xl rotate-12 square-hover"
+                style={{ background: 'linear-gradient(135deg, #e91e8c 0%, #c0176f 100%)' }}
+              />
+
+              {/* Carré contenu */}
+              <div
+                className="absolute inset-4 rounded-2xl -rotate-6 flex items-center justify-center square-hover"
+                style={{ background: '#0a0a0a', border: '2px solid #1f1f1f' }}
+              >
+                <div className="text-center rotate-6">
+                  <div
+                    className="font-display text-7xl"
+                    style={{ color: '#e91e8c' }}
+                  >
+                    100%
+                  </div>
+
+                  <div className="font-display text-2xl tracking-widest text-white">
+                    MAISON
+                  </div>
+
+                  <div
+                    className="font-body text-xs mt-2 tracking-[0.3em]"
+                    style={{ color: '#aaaaaa' }}
+                  >
+                    DEPUIS BARBEZIEUX
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
 
-      </div>
-    </div>
-
-  </div>
-
-  {/* Animations */}
-  <style>{`
+        {/* Animations */}
+        <style>{`
     @keyframes squareFadeIn {
       from {
         opacity: 0;
@@ -409,16 +405,16 @@ export default function Home() {
       box-shadow: 0 0 40px rgba(233,30,140,0.5);
     }
   `}</style>
-</section>
+      </section>
 
       <section className="py-24 px-6" style={{ background: '#111111' }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="font-body text-sm uppercase tracking-[0.4em] mb-3" style={{ color: '#e91e8c' }}>
+              <p className="font-body text-sm uppercase tracking-[0.4em] mb-3" style={{ color: '#ffffff' }}>
                 On reste actifs
               </p>
-              <h2 className="font-display text-5xl sm:text-6xl text-white">
+              <h2 className="font-display text-5xl sm:text-6xl text-outline-pink">
                 ACTUS DU MOMENT
               </h2>
             </div>
@@ -447,49 +443,48 @@ export default function Home() {
         </div>
       </section>
 
-<section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
-  <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-10">
-      <p
-        className="font-body text-sm uppercase tracking-[0.4em] mb-3"
-        style={{ color: '#e91e8c' }}
-      >
-        Nous trouver
-      </p>
-      <h2 className="font-display text-5xl sm:text-6xl text-white">
-        NOTRE ADRESSE
-      </h2>
-      <p className="font-body text-sm mt-4" style={{ color: '#aaaaaa' }}>
-        33 Av. Pierre Mendès France, 16300 Barbezieux-Saint-Hilaire
-      </p>
-    </div>
+      <section className="py-24 px-6" style={{ background: '#0a0a0a' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <p
+              className="font-body text-sm uppercase tracking-[0.4em] mb-3"
+              style={{ color: '#ffffff' }}
+            >
+              Nous trouver
+            </p>
+            <h2 className="font-display text-5xl sm:text-6xl text-outline-pink">
+              NOTRE ADRESSE
+            </h2>
+            <p className="font-body text-sm mt-4" style={{ color: '#ffffff' }}>
+              33 Av. Pierre Mendès France, 16300 Barbezieux-Saint-Hilaire
+            </p>
+          </div>
 
 
-<div
-  className="w-full h-[400px] rounded-2xl overflow-hidden border border-[#1f1f1f] transition-all duration-300"
-  onMouseEnter={e => {
-    e.currentTarget.style.boxShadow = '0 0 30px rgba(233,30,140,0.3)';
-  }}
-  onMouseLeave={e => {
-    e.currentTarget.style.boxShadow = 'none';
-  }}
->
-  <iframe
-    title="Google Maps"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    loading="lazy"
-    allowFullScreen
-    referrerPolicy="no-referrer-when-downgrade"
-    src="https://www.google.com/maps?q=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire&output=embed"
-  ></iframe>
-</div>
+          <div
+            className="w-full h-[400px] rounded-2xl overflow-hidden border border-[#1f1f1f] transition-all duration-300"
+            onMouseEnter={e => {
+              e.currentTarget.style.boxShadow = '0 0 30px rgba(233,30,140,0.3)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            <iframe
+              title="Google Maps"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire&output=embed"
+            ></iframe>
+          </div>
 
-<div className="text-center">
+          <div className="text-center">
   <a
-    href="https://www.google.com/maps/dir/?api=1&destination=33+Av.+Pierre+Mendès+France,+16300+Barbezieux-Saint-Hilaire"
-    target="_blank"
+    href="/contact"
     rel="noopener noreferrer"
     className="inline-block mt-6 px-6 py-3 rounded-full font-body text-sm uppercase tracking-widest transition-all duration-200"
     style={{ background: '#e91e8c', color: '#fff' }}
@@ -502,12 +497,12 @@ export default function Home() {
       e.currentTarget.style.boxShadow = 'none';
     }}
   >
-    Itinéraire Google Maps
+    Nous contacter
   </a>
 </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
 
     </div>

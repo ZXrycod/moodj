@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from "./components/ScrollToTop";
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -16,16 +17,14 @@ import AdminNews from './admin/AdminNews';
 function PublicLayout() {
   const location = useLocation();
   return (
-    <div
-      key={location.pathname}
-      style={{ animation: 'pageFadeIn 0.35s ease forwards' }}
-    >
+    <div key={location.pathname}>
       <style>{`
         @keyframes pageFadeIn {
           from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
